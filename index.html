@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_bar">Тест на совместимость с видами спорта</div> 
+        <div>Пройдите тест и узнайте: какой вид спорта вам больше подходит по телосложению</div>
+    </header>
+
+
+    <main>
+        <div class="backgr_quest" id="cont_1">
+            <div class="question1">
+                <p>1. Какое из этих утверждений лучше всего описывает ваше телосложение?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 1" id="1"><label for="">Я легко набираю вес, но испытываю проблемы с его потерей. </label><br>
+                <input type="radio" name="Ответ 1" id="2"><label for="">Я могу легко набрать или сбросить вес, не задумываясь. </label><br>
+                <input type="radio" name="Ответ 1" id="3"><label for="">Я могу легко сбросить вес, но мне трудно поддерживать его.  </label><br>
+            </div>
+            <button onclick="replaceBlock1_2()" class="btn_answer" id="btn_answer1">Ответить</button>
+        </div>
+
+        <div class="backgr_quest" id="cont_2" style="display: none;">
+            <div class="question2">
+                <p>2. Как бы вы описали форму своего тела?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 2" id="4"><label for="">Грушевидная фигура (мои бедра шире плеч).</label><br>
+                <input type="radio" name="Ответ 2" id="5"><label for="">"Песочные часы" (моя талия меньше, чем плечи и бедра).</label><br>
+                <input type="radio" name="Ответ 2" id="6"><label for="">Прямоугольное (у меня бедра и плечи одинаковой ширины). </label><br>
+                <input type="radio" name="Ответ 2" id="7"><label for="">Я не уверен, какой из этих ответов мне больше подходит.</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock2_1()" class="btn_back" >К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock2_3()" class="btn_answer" id="btn_answer2">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_3" style="display: none;">
+            <div class="question3">
+                <p>3. Насколько легко для вас набрать мышечную массу?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 3" id="8"><label for="">Довольно просто, но мне приходится много работать.</label><br>
+                <input type="radio" name="Ответ 3" id="9"><label for="">Чрезвычайно просто! Я от природы мускулистый.</label><br>
+                <input type="radio" name="Ответ 3" id="10"><label for="">Совсем не просто. Мне сложно набрать какой-либо вес, особенно мышечный.</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock3_2()" class="btn_back" id="btn_back2">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock3_4()" class="btn_answer" id="btn_answer3">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_4" style="display: none;">
+            <div class="question4">
+                <p>4. Какое из этих описаний лучше всего описывает ваше тело?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 4" id="11"><label for="">Мягкое и округлое.</label><br>
+                <input type="radio" name="Ответ 4" id="12"><label for="">Сильный и мускулистый.</label><br>
+                <input type="radio" name="Ответ 4" id="13"><label for="">Худые и костлявые.</label><br>
+                <input type="radio" name="Ответ 4" id="14"><label for="">Я не уверен, какой из этих ответов мне больше подходит.</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock4_3()" class="btn_back" id="btn_back3">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock4_5()" class="btn_answer" id="btn_answer4">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_5" style="display: none;">
+            <div class="question5">
+                <p>5. Какой из этих вариантов лучше всего описывает ваши конечности (руки и ноги)?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 5" id="15"><label for="">Широкий и коренастый.</label><br>
+                <input type="radio" name="Ответ 5" id="16"><label for="">Средний.</label><br>
+                <input type="radio" name="Ответ 5" id="17"><label for="">Длинный и худощавый.</label><br>
+                <input type="radio" name="Ответ 5" id="18"><label for="">Я не уверен, какой из этих ответов мне больше подходит.</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock5_4()" class="btn_back" id="btn_back4">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock5_6()" class="btn_answer" id="btn_answer5">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_6" style="display: none;">
+            <div class="question6">
+                <p>6. На какое место вашего тела обычно приходится наибольший вес?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 6" id="19"><label for="">Мой живот, тазобедренные суставы.  </label><br>
+                <input type="radio" name="Ответ 6" id="20"><label for="">Моя нижняя часть тела и грудь. </label><br>
+                <input type="radio" name="Ответ 6" id="21"><label for="">Мой живот.</label><br>
+                <input type="radio" name="Ответ 6" id="22"><label for="">Я не уверен, какой из этих ответов мне больше подходит.</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock6_5()" class="btn_back" id="btn_back5">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock6_7()" class="btn_answer" id="btn_answer6">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_7" style="display: none;">
+            <div class="question7">
+                <p>7. Как бы вы описали свой метаболизм?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 7" id="23"><label for="">Медленнее, чем у обычного человека. Я должен быть очень осторожен с тем, что я ем.</label><br>
+                <input type="radio" name="Ответ 7" id="24"><label for="">Примерно такой же, как у обычного человека. Мой вес остается стабильным, пока я хорошо питаюсь и занимаюсь спортом. </label><br>
+                <input type="radio" name="Ответ 7" id="25"><label for="">Быстрее, чем у обычного человека. Что бы я ни ел, я не набираю вес. </label><br>
+                <input type="radio" name="Ответ 7" id="26"><label for="">Я не уверен, какой из этих ответов мне больше подходит.  </label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock7_6()" class="btn_back" id="btn_back6">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock7_8()" class="btn_answer" id="btn_answer7">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_8" style="display: none;">
+            <div class="question8">
+                <p>8. Какие упражнения вам выполнять проще всего?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 8" id="27"><label for="">Поднятие тяжестей. </label><br>
+                <input type="radio" name="Ответ 8" id="28"><label for="">Высокоинтенсивная интервальная тренировка (сочетание кардиотренировок и упражнений с собственным весом).  </label><br>
+                <input type="radio" name="Ответ 8" id="29"><label for="">Кардиотренировка.</label><br>
+                <input type="radio" name="Ответ 8" id="30"><label for="">Я не уверен, какой из этих ответов мне больше подходит.</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock8_7()" class="btn_back" id="btn_back7">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock8_9()" class="btn_answer" id="btn_answer8">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_9" style="display: none;">
+            <div class="question9">
+                <p>9. Как бы вы описали свой образ жизни?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 9" id="31"><label for="">Расслабился. Я предпочитаю играть в видеоигры, а не ходить в спортзал. </label><br>
+                <input type="radio" name="Ответ 9" id="32"><label for="">Активный. Я люблю двигать своим телом!</label><br>
+                <input type="radio" name="Ответ 9" id="33"><label for="">Средний. Я не стараюсь изо всех сил заниматься спортом, но время от времени выхожу на прогулку. </label><br>
+                <input type="radio" name="Ответ 9" id="34"><label for="">Я не уверен, какой из этих ответов мне больше подходит. </label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock9_8()" class="btn_back" id="btn_back8">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock9_10()" class="btn_answer" id="btn_answer9">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_10" style="display: none;">
+            <div class="question10">
+                <p>10. Как часто вы испытываете чувство голода?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 10" id="35"><label for="">Очень часто.</label><br>
+                <input type="radio" name="Ответ 10" id="36"><label for="">Не так часто.</label><br>
+                <input type="radio" name="Ответ 10" id="37"><label for="">Редко. </label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock10_9()" class="btn_back" id="btn_back9">К предыдущему вопросу</button> -->
+            <button onclick="replaceBlock10_11()" class="btn_answer" id="btn_answer10">Ответить</button>
+
+        </div>
+
+        <div class="backgr_quest" id="cont_11" style="display: none;">
+            <div class="question11">
+                <p>11. Измерьте своё запястье. Сколько получилось?</p>
+            </div>
+            <div class="answer">
+                <input type="radio" name="Ответ 11" id="38"><label for="">Более 17 сантиметров</label><br>
+                <input type="radio" name="Ответ 11" id="39"><label for="">15-17 сантиметров</label><br>
+                <input type="radio" name="Ответ 11" id="40"><label for="">Менее 15 сантиметров</label><br>
+            </div>
+            <!-- <button onclick="replaceBackBlock11_10()" class="btn_back" id="btn_back10">К предыдущему вопросу</button> -->
+            <button onclick="showResult()" class="btn_answer" id="btn_answer11">Завершить</button>
+
+        </div>
+
+
+
+
+        <div class="result_cont" id="result_cont_endo" style="display: none;">
+            <div class="result_head">Результат: Вы эндоморф</div>
+            <div class="result_body">
+                <img style="width: 200px; height: 400px;" src="/public/Эндоморф.jpg" alt="">
+                <div class="result_text">Вам не соствит труда набрать вес, но сбросить его или набрать мышечную массу не так легко. Эндоморфы будут хороши в пауэрлифтинге, бодибилдинге и в любом другом виде спорта, где нужно много сил.</div>
+            </div>
+        </div>
+
+        <div class="result_cont" id="result_cont_mezo" style="display: none;">
+            <div class="result_head">Результат: Вы мезоморф</div>
+            <div class="result_body">
+                <img style="width: 200px; height: 400px;" src="/public/Мезоморф.jpg" alt="">
+                <div class="result_text">Мезаморфы универсальный класс. С этим телосложением можно податься в любой вид спорта.</div>
+            </div>
+        </div>
+
+        <div class="result_cont" id="result_cont_ecto" style="display: none;">
+            <div class="result_head">Результат: Вы эктоморф</div>
+            <div class="result_body">
+                <img style="width: 200px; height: 400px;" src="/public/Эктоморф.jpg" alt="">
+                <div class="result_text">Эктоморф хорошо себя может показать в лëгкой атлетике, футболе, баскетболе, теннисе и других видах спорта, где не нужны массивные мышцы.</div>
+            </div>
+        </div>
+
+        <div id="result_cont_an" style="display: none;">
+            <img class="img_an" src="/public/Чел ты....jpg" alt="">
+            <div>
+                <p class="text_an">
+                    Поберегите своё время, отвечайте честно!
+                </p>
+            </div>
+        </div>
+
+
+
+    </main>
+
+</body>
+<script src="/script.js"></script>
+</html>
