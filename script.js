@@ -387,7 +387,7 @@ function compareArraysMezo_Endo(array1, array2, array3) {
   const matchPercentage1 = (countArray1 / totalLength) * 100;
   const matchPercentage2 = (countArray2 / totalLength) * 100;
 
-if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+if (matchPercentage1 >= 50 && matchPercentage2 <= 40) {
     console.log('Молодец');
     resultContMezo_Endo.style.display = 'block';
     return true
@@ -430,7 +430,7 @@ function compareArraysEcto_Mezo(array1, array2, array3) {
   const matchPercentage2 = (countArray2 / totalLength) * 100;
 
 
-  if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+  if (matchPercentage1 >= 50 && matchPercentage2 <= 40) {
     console.log('Молодец');
     resultContEcto_Mezo.style.display = 'block';
     return true
@@ -473,7 +473,7 @@ function compareArraysEcto_Endo(array1, array2, array3) {
   const matchPercentage2 = (countArray2 / totalLength) * 100;
 
 
-  if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+  if (matchPercentage1 >= 50 && matchPercentage2 <= 40) {
     console.log('Молодец');
     resultContEcto_Endo.style.display = 'block';
     return true
@@ -516,7 +516,7 @@ function compareArraysEndo_Mezo(array1, array2, array3) {
   const matchPercentage2 = (countArray2 / totalLength) * 100;
 
 
-  if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+  if (matchPercentage1 >= 50 && matchPercentage2 <= 40) {
     console.log('Молодец');
     resultContEndo_Mezo.style.display = 'block';
     return true
@@ -558,7 +558,7 @@ function compareArraysMezo_Ecto(array1, array2, array3) {
   const matchPercentage1 = (countArray1 / totalLength) * 100;
   const matchPercentage2 = (countArray2 / totalLength) * 100;
 
-if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+if (matchPercentage1 >= 50 && matchPercentage2 <= 40) {
     console.log('Молодец');
     resultContMezo_Ecto.style.display = 'block';
     return true
