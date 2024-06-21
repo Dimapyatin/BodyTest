@@ -34,6 +34,7 @@ radioInputs.forEach(input => {
 
 
 
+
 const button2 = document.getElementById('btn_answer2');
 
 radioInputs.forEach(input => {
@@ -122,6 +123,20 @@ radioInputs.forEach(input => {
 
 // в каждой функции убирается прошлий вопрос и появляется следующий
 function replaceBlock1_2() {
+
+//   // Добавляем обработчик события на кнопку
+// const nextButton = document.querySelector('#next-button');
+// // Добавляем обработчик события на кнопку
+// nextButton.addEventListener('click', function() {
+//   if (radioButton.checked) {
+//       // Радиокнопка выбрана, переходим на следующую страницу
+      
+//   } else {
+//       // Радиокнопка не выбрана, блокируем переход на следующую страницу
+//       alert('Пожалуйста, выберите радиокнопку!');
+//   }
+// });
+
   const question1 = document.getElementById('cont_1'); 
   const question2 = document.getElementById('cont_2');
 
@@ -206,7 +221,7 @@ function replaceBlock10_11() {
 
 // Функция для сравнения данных двух массивов 1
 function compareArraysEndo(array1, array2) {
-  const resultContEndo = document.getElementById('result_cont_endo');
+  let resultContEndo = document.getElementById('result_cont_endo');
   const resultContAn = document.getElementById('result_cont_an');
 
   // проверяется длина массивов
@@ -229,7 +244,7 @@ function compareArraysEndo(array1, array2) {
   const matchPercentage = (count / totalLength) * 100;
 
   // если количество совпавших значений полученного массива со значеними заданного массива больше 70%, то фозвращается true
-  if (matchPercentage >= 70) {
+  if (matchPercentage >= 65) {
     resultContEndo.style.display = 'block';
     return true;
 
@@ -239,7 +254,7 @@ function compareArraysEndo(array1, array2) {
 
 // Функция для сравнения данных двух массивов 2
 function compareArraysMezo(array1, array2) {
-  const resultContMezo = document.getElementById('result_cont_mezo');
+  let resultContMezo = document.getElementById('result_cont_mezo');
   const resultContAn = document.getElementById('result_cont_an');
 
 
@@ -259,7 +274,7 @@ function compareArraysMezo(array1, array2) {
 
   const matchPercentage = (count / totalLength) * 100;
 
-  if (matchPercentage >= 70) {
+  if (matchPercentage >= 65) {
     console.log('Молодец');
     resultContMezo.style.display = 'block';
     return true
@@ -268,7 +283,7 @@ function compareArraysMezo(array1, array2) {
 }
 // Функция для сравнения данных двух массивов 3
 function compareArraysEcto(array1, array2) {
-  const resultContEcto = document.getElementById('result_cont_ecto');
+  let resultContEcto = document.getElementById('result_cont_ecto');
   const resultContAn = document.getElementById('result_cont_an');
 
   if (array1.length !== array2.length) {
@@ -287,9 +302,265 @@ function compareArraysEcto(array1, array2) {
 
   const matchPercentage = (count / totalLength) * 100;
 
-  if (matchPercentage >= 70) {
+  if (matchPercentage >= 65) {
     console.log('Молодец');
     resultContEcto.style.display = 'block';
+    return true
+
+  } else{return false};
+  
+}
+
+// Функция для сравнения данных двух массивов 4
+
+function compareArraysEndo_Ecto(array1, array2, array3) {
+  let resultContEndo_Ecto = document.getElementById('result_cont_endo_ecto');
+  const resultContAn = document.getElementById('result_cont_an');
+
+  if (array1.length !== array2.length) {
+    console.log('Нет');
+    return;
+  }
+  if (array1.length !== array3.length) {
+    console.log('Нет');
+    return;
+  }
+
+  let countArray1 = 0;
+  let countArray2 = 0;
+  const totalLength = array1.length;
+
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array2[i]) {
+      countArray1++;
+    }
+  }
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array3[i]) {
+      countArray2++;
+    }
+  }
+
+  const matchPercentage1 = (countArray1 / totalLength) * 100;
+  const matchPercentage2 = (countArray2 / totalLength) * 100;
+
+
+  if (matchPercentage1 >= 50 && matchPercentage2 <= 40) {
+    console.log('Молодец');
+    resultContEndo_Ecto.style.display = 'block';
+    return true
+
+  } else{return false};
+  
+}
+
+// Функция для сравнения данных двух массивов 5
+
+function compareArraysMezo_Endo(array1, array2, array3) {
+  let resultContMezo_Endo = document.getElementById('result_cont_mezo_endo');
+  const resultContAn = document.getElementById('result_cont_an');
+
+  if (array1.length !== array2.length) {
+    console.log('Нет');
+    return;
+  }
+  if (array1.length !== array3.length) {
+    console.log('Нет');
+    return;
+  }
+
+  let countArray1 = 0;
+  let countArray2 = 0;
+  const totalLength = array1.length;
+
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array2[i]) {
+      countArray1++;
+    }
+  }
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array3[i]) {
+      countArray2++;
+    }
+  }
+
+  const matchPercentage1 = (countArray1 / totalLength) * 100;
+  const matchPercentage2 = (countArray2 / totalLength) * 100;
+
+if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+    console.log('Молодец');
+    resultContMezo_Endo.style.display = 'block';
+    return true
+
+  } else{return false};
+  
+}
+
+// Функция для сравнения данных двух массивов 6
+
+function compareArraysEcto_Mezo(array1, array2, array3) {
+  let resultContEcto_Mezo = document.getElementById('result_cont_ecto_mezo');
+  const resultContAn = document.getElementById('result_cont_an');
+
+  if (array1.length !== array2.length) {
+    console.log('Нет');
+    return;
+  }
+  if (array1.length !== array3.length) {
+    console.log('Нет');
+    return;
+  }
+
+  let countArray1 = 0;
+  let countArray2 = 0;
+  const totalLength = array1.length;
+
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array2[i]) {
+      countArray1++;
+    }
+  }
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array3[i]) {
+      countArray2++;
+    }
+  }
+
+  const matchPercentage1 = (countArray1 / totalLength) * 100;
+  const matchPercentage2 = (countArray2 / totalLength) * 100;
+
+
+  if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+    console.log('Молодец');
+    resultContEcto_Mezo.style.display = 'block';
+    return true
+
+  } else{return false};
+  
+}
+
+// Функция для сравнения данных двух массивов 7
+
+function compareArraysEcto_Endo(array1, array2, array3) {
+  let resultContEcto_Endo = document.getElementById('result_cont_ecto_endo');
+  const resultContAn = document.getElementById('result_cont_an');
+
+  if (array1.length !== array2.length) {
+    console.log('Нет');
+    return;
+  }
+  if (array1.length !== array3.length) {
+    console.log('Нет');
+    return;
+  }
+
+  let countArray1 = 0;
+  let countArray2 = 0;
+  const totalLength = array1.length;
+
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array2[i]) {
+      countArray1++;
+    }
+  }
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array3[i]) {
+      countArray2++;
+    }
+  }
+
+  const matchPercentage1 = (countArray1 / totalLength) * 100;
+  const matchPercentage2 = (countArray2 / totalLength) * 100;
+
+
+  if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+    console.log('Молодец');
+    resultContEcto_Endo.style.display = 'block';
+    return true
+
+  } else{return false};
+  
+}
+
+// Функция для сравнения данных двух массивов 8
+
+function compareArraysEndo_Mezo(array1, array2, array3) {
+  let resultContEndo_Mezo = document.getElementById('result_cont_endo_mezo');
+  const resultContAn = document.getElementById('result_cont_an');
+
+  if (array1.length !== array2.length) {
+    console.log('Нет');
+    return;
+  }
+  if (array1.length !== array3.length) {
+    console.log('Нет');
+    return;
+  }
+
+  let countArray1 = 0;
+  let countArray2 = 0;
+  const totalLength = array1.length;
+
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array2[i]) {
+      countArray1++;
+    }
+  }
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array3[i]) {
+      countArray2++;
+    }
+  }
+
+  const matchPercentage1 = (countArray1 / totalLength) * 100;
+  const matchPercentage2 = (countArray2 / totalLength) * 100;
+
+
+  if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+    console.log('Молодец');
+    resultContEndo_Mezo.style.display = 'block';
+    return true
+
+  } else{return false};
+  
+}
+
+// Функция для сравнения данных двух массивов 9
+
+function compareArraysMezo_Ecto(array1, array2, array3) {
+  let resultContMezo_Ecto = document.getElementById('result_cont_mezo_ecto');
+  const resultContAn = document.getElementById('result_cont_an');
+
+  if (array1.length !== array2.length) {
+    console.log('Нет');
+    return;
+  }
+  if (array1.length !== array3.length) {
+    console.log('Нет');
+    return;
+  }
+
+  let countArray1 = 0;
+  let countArray2 = 0;
+  const totalLength = array1.length;
+
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array2[i]) {
+      countArray1++;
+    }
+  }
+  for (let i = 0; i < totalLength; i++) {
+    if (array1[i] === array3[i]) {
+      countArray2++;
+    }
+  }
+
+  const matchPercentage1 = (countArray1 / totalLength) * 100;
+  const matchPercentage2 = (countArray2 / totalLength) * 100;
+
+if (matchPercentage1 >= 60 && matchPercentage2 <= 40) {
+    console.log('Молодец');
+    resultContMezo_Ecto.style.display = 'block';
     return true
 
   } else{return false};
@@ -300,9 +571,10 @@ function compareArraysEcto(array1, array2) {
 
 
 
-const mas1 = ['1', '4', '8', '11', '15', '19', '23', '27', '31', '35', '38'];
-const mas2 = ['2', '5', '9', '12', '16', '20', '24', '28', '32', '36', '39'];
-const mas3 = ['3', '6', '10', '13', '17', '21', '25', '29', '33', '37', '40'];
+let mas1 = ['1', '4', '8', '11', '15', '19', '23', '27', '31', '35', '38'];
+let mas2 = ['2', '5', '9', '12', '16', '20', '24', '28', '32', '36', '39'];
+let mas3 = ['3', '6', '10', '13', '17', '21', '25', '29', '33', '37', '40'];
+
 
 // функция, присваемая кнопке последнего вопроса
 function showResult() {
@@ -332,13 +604,27 @@ function showResult() {
     else if(compareArraysEcto(buttonIdArray, mas3)){
       return true;
     }
+    else if(compareArraysEndo_Ecto(buttonIdArray, mas1, mas3)){
+      return true;
+    }
+    else if(compareArraysMezo_Endo(buttonIdArray, mas2, mas1)){
+      return true;
+    }
+    else if(compareArraysEcto_Mezo(buttonIdArray, mas3, mas2)){
+      return true;
+    }
+    else if(compareArraysEcto_Endo(buttonIdArray, mas3, mas1)){
+      return true;
+    }
+    else if(compareArraysEndo_Mezo(buttonIdArray, mas1, mas2)){
+      return true;
+    }
+    else if(compareArraysMezo_Ecto(buttonIdArray, mas2, mas3)){
+      return true;
+    }
     else{
       resultContAn.style.display = 'block';
     }
 
   }, 100)
 }
-
-
-
-

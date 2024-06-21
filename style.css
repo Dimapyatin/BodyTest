@@ -30,7 +30,7 @@ main{
 
 }
 .backgr_quest{
-    width: 80%;
+    width: 90%;
     max-width: 900px;
     min-height: 500px;
     margin: 0 auto;
@@ -195,7 +195,7 @@ input[type=radio]{
     .result_body{
         display: block;
     }
-    .img_endo{
+    .img{
         display: block;
         margin: 0 auto;
     }
